@@ -1,0 +1,8 @@
+uuid: 96ea4c25-e694-43bf-8edd-8557f507b1a3
+langcode: hu
+status: true
+dependencies: {  }
+id: blog-menu
+label: 'Blog menü'
+description: 'Menü - szinkronban a portfólióval'
+locked: false

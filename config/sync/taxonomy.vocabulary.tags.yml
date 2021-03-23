@@ -1,0 +1,8 @@
+uuid: 33fa25d3-6c9c-4878-90f3-7ddfc7af0c2c
+langcode: hu
+status: true
+dependencies: {  }
+name: Tags
+vid: tags
+description: ''
+weight: 0

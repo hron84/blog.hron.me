@@ -1,0 +1,6 @@
+entity_type_groups:
+  node:
+    post:
+      open_graph: open_graph
+      facebook: facebook
+      twitter_cards: twitter_cards

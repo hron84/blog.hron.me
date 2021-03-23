@@ -1,0 +1,8 @@
+uuid: ad9227c3-9f30-46f0-9411-7c5e9d130dd7
+langcode: hu
+status: true
+dependencies: {  }
+id: default
+label: default
+threshold: !!float 1
+challenge: recaptcha/reCAPTCHA

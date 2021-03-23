@@ -1,0 +1,49 @@
+uuid: 3d2efbb0-fa6c-4ce7-bc7a-a6171bd2d6a3
+langcode: hu
+status: true
+dependencies:
+  config:
+    - filter.format.markdown
+  module:
+    - simplemde
+format: markdown
+editor: simplemde
+settings:
+  image_upload_section:
+    image_upload:
+      status: 1
+      scheme: public
+      directory: inline-images
+      max_size: ''
+      max_dimensions:
+        width: ''
+        height: ''
+  spell_checker: 0
+  show_icons:
+    - heading
+    - heading-smaller
+    - heading-bigger
+    - heading-1
+    - heading-2
+    - heading-3
+    - code
+    - quote
+    - unordered-list
+    - ordered-list
+    - clean-block
+    - link
+    - image
+    - table
+    - horizontal-rule
+    - preview
+    - side-by-side
+    - fullscreen
+    - guide
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

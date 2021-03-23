@@ -1,0 +1,12 @@
+uuid: fc68fd54-c8f4-4076-ba07-da1ce2a4a11d
+langcode: hu
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: flXhTcp55yLcyy7ZLOhPGKGZobZQJdkAFVWV3LseiuI
+id: user.register
+label: 'Felhasználó létrehozása'
+targetEntityType: user
+cache: true

@@ -1,0 +1,128 @@
+use_format_specific_options: false
+default_highlighting: GESHIFILTER_DEFAULT_DONOTHING
+default_line_numbering: 1
+use_highlight_string_for_php: false
+enable_keyword_urls: true
+decode_entities: false
+css_mode: 2
+code_container: '3'
+tags: 'code blockcode'
+tag_styles:
+  16: 16
+  1: 0
+  2: 0
+  4: 0
+  8: 0
+tab_width: 4
+language:
+  php:
+    enabled: true
+    tags: php
+  cpp:
+    enabled: true
+    tags: cpp
+  java:
+    enabled: true
+    tags: java
+  batch:
+    enabled: true
+    tags: cmd
+  c:
+    enabled: true
+    tags: c
+  css:
+    enabled: true
+    tags: css
+  go:
+    enabled: true
+    tags: go
+  groovy:
+    enabled: true
+    tags: groovy
+  html5:
+    enabled: true
+    tags: html
+  javascript:
+    enabled: true
+    tags: js
+  jquery:
+    enabled: true
+    tags: jquery
+  kotlin:
+    enabled: true
+    tags: kotlin
+  make:
+    enabled: true
+    tags: make
+  mysql:
+    enabled: true
+    tags: mysql
+  nginx:
+    enabled: true
+    tags: nginx
+  oracle11:
+    enabled: true
+    tags: orasql
+  perl:
+    enabled: true
+    tags: perl
+  proftpd:
+    enabled: true
+    tags: proftpd
+  python:
+    enabled: true
+    tags: python
+  rails:
+    enabled: true
+    tags: rails
+  ruby:
+    enabled: true
+    tags: ruby
+  sass:
+    enabled: true
+    tags: sass
+  smarty:
+    enabled: true
+    tags: smarty
+  sql:
+    enabled: true
+    tags: sql
+  sshconfig:
+    enabled: true
+    tags: sshconfig
+  twig:
+    enabled: true
+    tags: twig
+  vb:
+    enabled: true
+    tags: vb
+  vbnet:
+    enabled: true
+    tags: vbnet
+  xml:
+    enabled: true
+    tags: xml
+  yaml:
+    enabled: true
+    tags: yaml
+  apache:
+    enabled: true
+    tags: apache
+  awk:
+    enabled: true
+    tags: awk
+  ini:
+    enabled: true
+    tags: ini
+  ldif:
+    enabled: true
+    tags: ldif
+  lua:
+    enabled: true
+    tags: lua
+  properties:
+    enabled: true
+    tags: properties
+_core:
+  default_config_hash: 1jZtSc2CSiEBA45nbX0wMKFY3bmcilIwOBQCKFscK0U
+langcode: hu

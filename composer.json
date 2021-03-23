@@ -1,0 +1,147 @@
+{
+    "name": "drupal/recommended-project",
+    "description": "Project template for Drupal 8 projects with a relocated document root",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "sparksuite/simplemde-markdown-editor",
+                "version": "1.11.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/sparksuite/simplemde-markdown-editor/archive/1.11.2.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "cachethq/emoji": "^3.0",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1",
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/adminimal_admin_toolbar": "^1.11",
+        "drupal/adminimal_theme": "^1.6",
+        "drupal/allowed_formats": "^1.3",
+        "drupal/backup_migrate": "^5.0",
+        "drupal/bootstrap4": "^2.1",
+        "drupal/change_author_action": "^1.0",
+        "drupal/console": "^1.9",
+        "drupal/contentimport": "^9.3",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-project-message": "^8.8",
+        "drupal/core-recommended": "^8.8",
+        "drupal/default_content": "^2.0@alpha",
+        "drupal/eu_cookie_compliance": "^1.5",
+        "drupal/fontawesome": "^2.18",
+        "drupal/geshifilter": "^2.0",
+        "drupal/google_analytics": "^3.1",
+        "drupal/hide_revision_field": "^2.2",
+        "drupal/markdown": "^2.0",
+        "drupal/metatag": "^1.15",
+        "drupal/pathauto": "^1.8",
+        "drupal/recaptcha": "^3.0",
+        "drupal/recaptcha_v3": "^1.4",
+        "drupal/redirect": "^1.6",
+        "drupal/simplemde": "^1.0@alpha",
+        "drush/drush": "^10.0",
+        "fortawesome/font-awesome": "5.13.1",
+        "league/commonmark": "^1.5",
+        "oomphinc/composer-installers-extender": "^2.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "patches": {
+            "drush/drush": {
+                "Drush cannot detect site-local path correctly in some environments": "patches/drush-site-local-path-detection.patch",
+                "#4251 - Drush - Import multiple custom translation po files": "https://patch-diff.githubusercontent.com/raw/drush-ops/drush/pull/4251.patch"
+            },
+            "drupal/backup_migrate": {
+                "#2968766 - Add Drush 9 support": "https://www.drupal.org/files/issues/2019-11-13/backup_migrate_drush-2968766-12.patch"
+            },
+            "drupal/simplemde": {
+                "#12 WIP added support for image upload": "https://patch-diff.githubusercontent.com/raw/nuvoleweb/simplemde/pull/12.patch"
+            },
+            "oomphinc/composer-installers-extender": {
+                "Fix custom install path behavior": "https://github.com/neclimdul/composer-installers-extender/commit/92ea53551ab68041ac47b5e8799130b79779652a.patch"
+            }
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-types": ["library"],
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "web/libraries/fontawesome": [
+                "fortawesome/font-awesome"
+            ]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        }
+    },
+    "require-dev": {
+        "drupal/devel": "^4.1"
+    }
+}

@@ -1,0 +1,83 @@
+uuid: 743aca5b-fd0c-4b13-a950-5b237a5e57f3
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.field.node.post.body
+    - field.field.node.post.field_comment
+    - field.field.node.post.field_tags
+    - node.type.post
+  module:
+    - comment
+    - text
+id: node.post.default
+targetEntityType: node
+bundle: post
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_comment:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_tags:
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  langcode:
+    type: language_select
+    weight: 4
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  path: true
+  promote: true
+  revision_log: true
+  status: true
+  uid: true
+  url_redirects: true

@@ -1,0 +1,16 @@
+uuid: 3825c845-295b-4d4a-b32b-9946ed1aded7
+langcode: hu
+status: true
+dependencies:
+  config:
+    - block_content.type.textual
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.textual
+target_entity_type_id: block_content
+target_bundle: textual
+default_langcode: site_default
+language_alterable: false

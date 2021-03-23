@@ -1,0 +1,14 @@
+uuid: c396d456-cee8-4e9c-96b1-2fee5e0685cd
+langcode: hu
+status: true
+dependencies:
+  config:
+    - user.role.administrator
+  module:
+    - user
+id: user_add_role_action.administrator
+label: 'A kiválasztott felhasználók felhatalmazása administrator szerepkörrel.'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: administrator

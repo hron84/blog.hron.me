@@ -1,0 +1,22 @@
+uuid: 917a741d-6f70-4398-bba2-103cb3d7bb56
+langcode: hu
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hron_blog
+_core:
+  default_config_hash: YqKTtloWJ8FjLtfVNfrHaK6kVgxT67lC1cJ3j6i6WLo
+id: hron_blog_messages
+theme: hron_blog
+region: header
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

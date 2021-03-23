@@ -1,0 +1,27 @@
+--- a/src/Preflight/RedispatchToSiteLocal.php	2020-06-27 19:47:36.803723363 +0200
++++ b/src/Preflight/RedispatchToSiteLocal.php	2020-06-27 19:49:29.210892351 +0200
+@@ -45,18 +45,16 @@
+             return false;
+         }
+ 
++        if(dirname($argv[0]) == dirname($siteLocalDrush)) {
++            return false;
++        }
++
+         // Redispatch!
+         $command = escapeshellarg($siteLocalDrush);
+         $preflightLog->log(dt('Redispatch to site-local Drush: !cmd.', ['!cmd' => $command]));
+         array_shift($argv);
+-        $args = array_map(
+-            function ($item) {
+-                return escapeshellarg($item);
+-            },
+-            $argv
+-        );
+-        $command .= ' ' . implode(' ', $args);
+-        passthru($command, $status);
++        $ret = pcntl_exec($command, $argv);
++        $status = is_null($ret);
+         return $status;
+     }
+ 

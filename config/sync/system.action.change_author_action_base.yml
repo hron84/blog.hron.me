@@ -1,0 +1,13 @@
+uuid: 6d2bf7bc-fead-42f3-938f-02ebec8d55a1
+langcode: hu
+status: true
+dependencies:
+  module:
+    - change_author_action
+_core:
+  default_config_hash: 7S1uub6LxRSEJ9NnrLzgQEVmRU-zJM014IAJBLgdigQ
+id: change_author_action_base
+label: 'Szerző módosítása'
+type: node
+plugin: change_author_action_base
+configuration: {  }

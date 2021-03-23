@@ -1,0 +1,22 @@
+uuid: fa662745-9140-4181-ad57-e576b2cdbcc1
+langcode: hu
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - hron_blog
+_core:
+  default_config_hash: 8by5KRsb7ZpmjHj0ms1d7xAG_xH54AWsOX6spDLJ59U
+id: hron_blog_breadcrumbs
+theme: hron_blog
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

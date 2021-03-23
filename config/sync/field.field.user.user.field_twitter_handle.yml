@@ -1,0 +1,20 @@
+uuid: ae51c63c-96fe-42a4-8fc9-182780a4c4f9
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_twitter_handle
+  module:
+    - user
+id: user.user.field_twitter_handle
+field_name: field_twitter_handle
+entity_type: user
+bundle: user
+label: 'Twitter Handle'
+description: 'Twitter handle without @'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

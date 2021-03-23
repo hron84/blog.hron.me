@@ -1,0 +1,49 @@
+uuid: 9ba2a750-5dcc-4ddf-b369-c011a33aa7cf
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.field.node.post.body
+    - field.field.node.post.field_comment
+    - field.field.node.post.field_tags
+    - node.type.post
+  module:
+    - comment
+    - text
+    - user
+id: node.post.default
+targetEntityType: node
+bundle: post
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_comment:
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_tags:
+    weight: 102
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,7 @@
+uuid: 010f65af-fdcf-4278-994f-223e02734c6c
+langcode: hu
+status: true
+dependencies: {  }
+formId: comment_comment_form
+captchaType: default
+label: comment_comment_form

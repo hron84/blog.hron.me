@@ -1,0 +1,23 @@
+uuid: 2d04e9de-89ce-4529-ad00-dd90fab40062
+langcode: hu
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - hron_blog
+id: sitebranding
+theme: hron_blog
+region: nav_branding
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

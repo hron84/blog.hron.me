@@ -1,0 +1,44 @@
+<?php
+
+
+use Drupal\block\Entity\Block;
+
+/**
+ * @file
+ * hron_blog theme file.
+ */
+
+
+/**
+ * @implements hook_form_alter
+ */
+
+function hron_blog_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  //dpm($form_id);
+  //kpr($form['actions']);
+  switch($form_id) {
+
+  case 'comment_comment_form':
+    kpr($form['actions']['preview']['#attributes']);
+
+    $form['actions']['preview']['#attributes']['class'][] = 'btn-light';
+    $form['actions']['submit']['#attributes']['class'][] = 'btn-dark';
+
+    break;
+  } 
+}
+
+
+function hron_blog_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+  if (!empty($variables['elements']['#id'])) {
+    $block = Block::load($variables['elements']['#id']);
+    $suggestions[] = 'block__' . $block->getRegion() . '__' . $variables['elements']['#id'];
+  }
+  
+  // /* Use this 'else if' only if you are using page_manager module and want to know which region is the block */
+  // else if (isset($variables['elements']['#configuration']['region'])) {
+  //   $suggestions[] = 'block__page_' . $variables['elements']['#configuration']['region'] . '__' . end(explode(':', $variables['elements']['#plugin_id']));
+  // }
+}
+
+// vim: ft=php

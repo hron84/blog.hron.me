@@ -1,0 +1,10 @@
+uuid: 4e07f3ac-9dda-429c-abc2-d9246b2b86f1
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: M_Bh81osDyUQ4wV0GgU_NdBNqkzM87sLxjaCdFj9mnw
+id: account
+label: 'User account menu'
+description: 'A jelenleg bejelentkezett felhasználó fiókjával kapcsolatos műveletek'
+locked: true

@@ -1,0 +1,7 @@
+verify_hostname: false
+default_challenge: ''
+error_message: 'Antibot verification failed.'
+cacheable: false
+_core:
+  default_config_hash: jv0PKCJEOq2bOwY9RspuPZCf67ifVJ4tfTk-BfZMw8k
+langcode: hu

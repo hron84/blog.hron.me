@@ -1,0 +1,14 @@
+uuid: ded956b6-95df-4530-b2ba-913698c4cdd6
+langcode: hu
+status: true
+dependencies:
+  config:
+    - user.role.administrator
+  module:
+    - user
+id: user_remove_role_action.administrator
+label: 'administrator szerepkör megvonása a kiválasztott felhasználóktól.'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: administrator

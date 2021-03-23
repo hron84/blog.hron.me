@@ -1,0 +1,15 @@
+{
+  "name": "hron_blog",
+  "version": "0.1.0",
+  "description": "Hron Blog theme",
+  "author": "Gabor Garami <hron@hron.me>",
+  "license": "CC-BY-SA",
+  "dependencies": {
+    "sass": "^1.32.8",
+    "sass-lint": "^1.13.1"
+  },
+  "scripts": {
+      "sass:lint": "sass-lint scss/*.scss",
+      "sass:compile": "sass scss/style.scss css/style.css"
+  }
+}

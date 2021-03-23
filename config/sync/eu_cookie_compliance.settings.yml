@@ -1,0 +1,71 @@
+uuid: c9f8ef51-ab91-4786-bba2-fa696bd82875
+cookie_lifetime: 100
+containing_element: body
+domain: ''
+domains_option: 1
+domains_list: ''
+eu_only: false
+eu_only_js: false
+exclude_paths: "/admin\n/admin/*\n/batch\n/node/add*\n/node/*/*\n/user/*/*"
+exclude_admin_theme: false
+langcode: hu
+popup_agreed:
+  value: '<h2>Köszönjük a sütik elfogadását</h2><p>A használt sütikről további tudnivalók is olvashatók, de akár el is rejthető ez az üzenet.</p>'
+  format: plain_text
+popup_agree_button_message: Elfogadás
+popup_agreed_enabled: false
+popup_bg_hex: 0779bf
+popup_clicking_confirmation: true
+popup_scrolling_confirmation: false
+popup_delay: 1000
+show_more_info: true
+popup_more_info_button_message: 'További információk'
+popup_enabled: true
+popup_find_more_button_message: 'További információk'
+popup_height: 0
+popup_hide_agreed: false
+popup_hide_button_message: Hide
+popup_info:
+  value: '<h2>A felhasználói élmény javítása érdekében a webhelyen sütiket használunk</h2><p>Az „Elfogadás” gombra kattintva hozzájárul a sütik létrehozásához.</p>'
+  format: plain_text
+mobile_popup_info:
+  value: '<h2>A felhasználói élmény javítása érdekében a webhelyen sütiket használunk</h2><p>Az „Elfogadás” gomb megérintésével hozzájárul a sütik létrehozásához.</p>'
+  format: plain_text
+popup_info_template: new
+mobile_breakpoint: 768
+popup_link: '<front>'
+popup_link_new_window: true
+popup_position: false
+fixed_top_position: true
+popup_text_hex: ffffff
+popup_width: 100%
+use_bare_css: false
+disagree_do_not_show_popup: false
+reload_page: false
+cookie_name: ''
+exclude_uid_1: false
+better_support_for_screen_readers: false
+use_mobile_message: false
+method: opt_in
+disagree_button_label: 'Köszönöm, nem'
+disabled_javascripts: ''
+automatic_cookies_removal: true
+allowed_cookies: ''
+consent_storage_method: do_not_store
+withdraw_message:
+  value: '<h2>A felhasználói élmény javítása érdekében a webhelyen sütiket használunk</h2><p>Hozzájárult, hogy sütiket hozzunk létre.</p>'
+  format: plain_text
+withdraw_action_button_label: 'Withdraw consent'
+withdraw_tab_button_label: 'Adatvédelmi beállítások'
+withdraw_enabled: false
+enable_save_preferences_button: true
+save_preferences_button_label: 'Save preferences'
+accept_all_categories_button_label: 'Accept all cookies'
+withdraw_button_on_info_popup: false
+domain_all_sites: false
+settings_tab_enabled: false
+reload_options: 0
+reload_routes_list: ''
+cookie_policy_version: 1.0.0
+_core:
+  default_config_hash: Wph0IY6FThC4QuHAGcSQDx6S8gysoclVsF2tkm4Lu8o

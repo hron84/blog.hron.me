@@ -1,0 +1,13 @@
+uuid: 43bfee83-d79f-42ec-b71d-44160b4bf811
+langcode: hu
+status: true
+dependencies: {  }
+id: daily_files
+label: 'Napi files'
+enabled: true
+keep: 3
+period: 86400
+cron: null
+source_id: public_files
+destination_id: private_files
+settings_profile_id: null

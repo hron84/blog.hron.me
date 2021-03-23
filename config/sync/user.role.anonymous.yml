@@ -1,0 +1,15 @@
+uuid: 3d4371ff-ad9a-4c3e-bc2d-e5c29d359cc7
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Névtelen felhasználó'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'display eu cookie compliance popup'
+  - 'post comments'

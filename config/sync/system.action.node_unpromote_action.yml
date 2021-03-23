@@ -1,0 +1,13 @@
+uuid: 23806fe8-6cff-4188-a65b-60234b6cd21e
+langcode: hu
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: JBptjnfuOMtsdKygklXxoOgeOCTMtQxlkymjnnj-cC0
+id: node_unpromote_action
+label: 'Tartalom levétele a címlapról'
+type: node
+plugin: node_unpromote_action
+configuration: {  }

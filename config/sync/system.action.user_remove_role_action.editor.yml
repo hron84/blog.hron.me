@@ -1,0 +1,14 @@
+uuid: 73aae1fa-e5c7-41a0-9148-ee78d7365d4b
+langcode: hu
+status: true
+dependencies:
+  config:
+    - user.role.editor
+  module:
+    - user
+id: user_remove_role_action.editor
+label: 'editor szerepkör megvonása a kiválasztott felhasználóktól.'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: editor

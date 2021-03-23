@@ -1,0 +1,23 @@
+uuid: f1984ea5-44f4-4056-a6e4-26dc0e9c2fa9
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.post
+  module:
+    - text
+id: node.post.body
+field_name: body
+entity_type: node
+bundle: post
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

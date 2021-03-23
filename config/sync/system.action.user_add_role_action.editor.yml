@@ -1,0 +1,14 @@
+uuid: d756bdef-ab5a-4ddf-8d4a-396184dc10cc
+langcode: hu
+status: true
+dependencies:
+  config:
+    - user.role.editor
+  module:
+    - user
+id: user_add_role_action.editor
+label: 'A kiválasztott felhasználók felhatalmazása editor szerepkörrel.'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: editor

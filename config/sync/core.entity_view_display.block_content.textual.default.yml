@@ -1,0 +1,23 @@
+uuid: e5038641-2900-4bdd-90ed-ee86dc1e98f2
+langcode: hu
+status: true
+dependencies:
+  config:
+    - block_content.type.textual
+    - field.field.block_content.textual.body
+  module:
+    - text
+id: block_content.textual.default
+targetEntityType: block_content
+bundle: textual
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

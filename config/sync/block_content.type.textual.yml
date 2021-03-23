@@ -1,0 +1,8 @@
+uuid: c95d6d89-c8e3-4c5d-af5a-ca2c558dc1e4
+langcode: hu
+status: true
+dependencies: {  }
+id: textual
+label: Szöveges
+revision: 0
+description: ''

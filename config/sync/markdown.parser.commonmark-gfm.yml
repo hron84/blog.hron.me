@@ -1,0 +1,86 @@
+dependencies:
+  module:
+    - markdown
+id: commonmark-gfm
+weight: 0
+enabled: true
+render_strategy:
+  type: filter_output
+  custom_allowed_html: '<span style>'
+  plugins:
+    commonmark: true
+    commonmark-emoji: false
+    commonmark-external-links: false
+    commonmark-footnotes: false
+    commonmark-heading-permalink: false
+    commonmark-strikethrough: true
+    commonmark-table: true
+    commonmark-task-list: true
+settings:
+  allow_unsafe_links: true
+  enable_em: true
+  enable_strong: true
+  html_input: allow
+  max_nesting_level: 0
+  use_asterisk: true
+  use_underscore: true
+extensions:
+  -
+    id: commonmark-attributes
+    weight: 0
+    enabled: false
+  -
+    id: commonmark-autolink
+    weight: 0
+    enabled: true
+  -
+    id: commonmark-disallowed-raw-html
+    weight: 0
+    enabled: true
+  -
+    id: commonmark-emoji
+    weight: 0
+    enabled: true
+    settings:
+      github_api_token: d904a94be59a52fe16aa31e2353f894bed713b4e
+  -
+    id: commonmark-external-links
+    weight: 0
+    enabled: false
+    settings: {  }
+  -
+    id: commonmark-footnotes
+    weight: 0
+    enabled: false
+    settings: {  }
+  -
+    id: commonmark-heading-permalink
+    weight: 0
+    enabled: false
+    settings: {  }
+  -
+    id: commonmark-mention
+    weight: 0
+    enabled: false
+  -
+    id: commonmark-smart-punctuation
+    weight: 0
+    enabled: false
+    settings: {  }
+  -
+    id: commonmark-strikethrough
+    weight: 0
+    enabled: true
+  -
+    id: commonmark-table
+    weight: 0
+    enabled: true
+  -
+    id: commonmark-table-of-contents
+    weight: 0
+    enabled: false
+    settings: {  }
+  -
+    id: commonmark-task-list
+    weight: 0
+    enabled: true

@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 6c0c2741-980b-4a45-9b0c-00606c45f98b
+  bundle: textual
+  default_langcode: hu
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Szép footer'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  content_translation_uid:
+    -
+      target_id: 1
+  content_translation_created:
+    -
+      value: 1616276167
+  body:
+    -
+      value: "<div class=\"row\">\r\n    <div class=\"col-md-8\">\r\n        <p class=\"py-4\">Copyright &copy; Garami Gábor 2019. Some rights reserved / Néhány jog fenntartva.</p>\r\n    </div>\r\n    <div class=\"col-md-4\">\r\n        <p>\r\n            <i class=\"fa fa-user\"></i>&nbsp;<span class=\"text-light\">Garami Gábor</span> <a rel=\"me authn\"\r\n                href=\"https://facebook.com/hron84\" class=\"text-muted\" target=\"_blank\">(@hron84)</a><br />\r\n            <i class=\"fa fa-envelope\"></i>&nbsp;<a rel=\"me\" href=\"mailto:hron+site%40hron%2Eme\"\r\n                class=\"text-light\">hron&#x40;hron&#x2E;me</a><br />\r\n            <i class=\"fa fa-mobile\"></i>&nbsp;&nbsp;<span\r\n                class=\"text-light\">&#x2B;&#x20;36&#x20;20&#x20;235&#x2D;96&#x32;&#x31;</span>\r\n        </p>\r\n    </div>\r\n</div>"
+      format: full_html
+      summary: ''

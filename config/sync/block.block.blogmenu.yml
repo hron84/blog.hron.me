@@ -1,0 +1,25 @@
+uuid: 2b4e733a-26a6-4776-98e9-5a1b959e23f4
+langcode: hu
+status: true
+dependencies:
+  config:
+    - system.menu.blog-menu
+  module:
+    - system
+  theme:
+    - hron_blog
+id: blogmenu
+theme: hron_blog
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:blog-menu'
+settings:
+  id: 'system_menu_block:blog-menu'
+  label: 'Blog menü'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

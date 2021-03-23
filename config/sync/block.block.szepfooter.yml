@@ -1,0 +1,25 @@
+uuid: 140e3a37-3ad2-41cb-ad8b-1a3804348f6c
+langcode: hu
+status: true
+dependencies:
+  content:
+    - 'block_content:textual:6c0c2741-980b-4a45-9b0c-00606c45f98b'
+  module:
+    - block_content
+  theme:
+    - hron_blog
+id: szepfooter
+theme: hron_blog
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:6c0c2741-980b-4a45-9b0c-00606c45f98b'
+settings:
+  id: 'block_content:6c0c2741-980b-4a45-9b0c-00606c45f98b'
+  label: 'Szép footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

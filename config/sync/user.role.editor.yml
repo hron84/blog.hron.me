@@ -1,0 +1,48 @@
+uuid: bf2edc2b-e584-4c82-a614-e9853558ba7e
+langcode: hu
+status: true
+dependencies: {  }
+id: editor
+label: Szerkesztő
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer comments'
+  - 'administer image styles'
+  - 'administer markdown'
+  - 'administer nodes'
+  - 'administer shortcuts'
+  - 'administer taxonomy'
+  - 'administer users'
+  - 'administer views'
+  - 'change own username'
+  - 'create post content'
+  - 'create url aliases'
+  - 'customize shortcut links'
+  - 'delete all revisions'
+  - 'delete any post content'
+  - 'delete own post content'
+  - 'edit any post content'
+  - 'edit own post content'
+  - 'notify of path changes'
+  - 'revert all revisions'
+  - 'revert post revisions'
+  - 'search content'
+  - 'skip comment approval'
+  - 'switch shortcut sets'
+  - 'translate any entity'
+  - 'translate post node'
+  - 'update content translations'
+  - 'use advanced search'
+  - 'use text format markdown'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view post revisions'
+  - 'view the administration theme'

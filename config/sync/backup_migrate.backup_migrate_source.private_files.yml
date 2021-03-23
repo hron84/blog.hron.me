@@ -1,0 +1,12 @@
+uuid: 99cae6c8-ae0b-42cb-9b02-d28ab0ab9b32
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: skfrgCS5JC2HXCG6QfQfiuuFWy_-OQ5Qs0FvaPwc6Vc
+id: private_files
+label: 'Privát fájlok könyvtára'
+type: DrupalFiles
+config:
+  name: 'Private Files Directory'
+  directory: 'private://'
