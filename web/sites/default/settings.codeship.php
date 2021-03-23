@@ -2,6 +2,11 @@
 
 // @codingStandardsIgnoreFile
 
+function fetchEnv($var, $default = '') {
+  $val = getenv($var);
+  return (!isset($val) || empty($val)) ? $default : $val;
+}
+
 /**
  * @file
  * Drupal site-specific configuration file.
@@ -793,8 +798,14 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  */
 
 $databases['default']['default'] = [
-  'driver' => 'sqlite',
-  'database' => 'sites/default/test.db',
+  'database' => fetchEnv('MYSQL_DB', 'test'),
+  'username' => fetchEnv('MYSQL_USER'),
+  'password' => fetchEnv('MYSQL_PASSWORD'),
+  'host' => 'localhost',
+  'port' => fetchEnv('MYSQL_PORT', 3307),
+  'driver' => 'mysql',
+  'prefix' => '',
+  'collation' => 'utf8mb4_general_ci',
 ];
 $settings['config_sync_directory'] = '../config/sync';
 #
