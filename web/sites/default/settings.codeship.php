@@ -2,9 +2,12 @@
 
 // @codingStandardsIgnoreFile
 
-function fetchEnv($var, $default = '') {
-  $val = getenv($var);
-  return (!isset($val) || empty($val)) ? $default : $val;
+if(!function_exists('fetchEnv')) {
+
+  function fetchEnv($var, $default = '') {
+    $val = getenv($var);
+    return (!isset($val) || empty($val)) ? $default : $val;
+  }
 }
 
 /**
