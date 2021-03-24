@@ -3,8 +3,8 @@
 # config valid for current version and patch releases of Capistrano
 lock '~> 3.16.0'
 
-set :application, 'aukcio.mjksz.hu'
-set :repo_url, 'ssh://git@git.macroweb.hu/customers/mjksz/aukcio.mjksz.hu.git'
+set :application, 'blog.hron.me'
+set :repo_url, 'https://github.com/hron84/blog.hron.me.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

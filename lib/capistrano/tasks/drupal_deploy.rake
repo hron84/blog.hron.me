@@ -14,6 +14,28 @@ def update_db
   cache_clear
 end
 
+def site_uuid
+  siteyml = File.expand_path('../../../config/sync/system.site.yml', File.dirname(__FILE__))
+  if File.exists? siteyml then
+    uuid = YAML.load_file(siteyml)['uuid']
+  else
+    uuid = SecureRandom.uuid
+  end
+
+  return uuid
+end
+
+def lang_uuid(lang)
+  langyml = File.expand_path("../../../config/sync/language.entity.#{lang}.yml", File.dirname(__FILE__))
+
+  if File.exists? langyml then
+    uuid = YAML.load_file(langyml)['uuid']
+  else
+    uuid = SecureRandom.uuid
+  end
+  return uuid
+end
+
 namespace :load do
   task :defaults do
     set :drupal_root, 'web'
@@ -34,7 +56,7 @@ namespace :drupal do
   task :set_paths do
     SSHKit.config.command_map[:drupal] = "#{fetch(:php_path, '/usr/bin/php')} -d memory_limit=-1 #{shared_path}/vendor/bin/drupal"
     SSHKit.config.command_map[:drush] = "#{fetch(:php_path, '/usr/bin/php')} -d memory_limit=-1 #{shared_path}/vendor/bin/drush"
-    SSHKit.config.command_map[:composer] = "#{fetch(:php_path, '/usr/bin/php')} -d memory_limit=-1 -d allow_url_fopen=1 #{release_path}/composer.phar"
+    SSHKit.config.command_map[:composer] = lambda { "#{fetch(:php_path, '/usr/bin/php')} -d memory_limit=-1 -d allow_url_fopen=1 #{release_path}/composer.phar" }
   end
 
   namespace :site do
@@ -47,18 +69,26 @@ namespace :drupal do
       end
     end
 
+    desc 'Setting up a brand new drupal instance based on the configs we have'
     task :setup do
       invoke 'drupal:set_paths'
+      invoke 'deploy:updating'
+      invoke 'composer:install'
 
       on roles(:app) do
         within release_path.join(fetch(:drupal_root)) do
-          execute :drush, 'site:install', "--root=#{current_path.join(fetch(:drupal_root))}", '--locale=hu', '--account-name=sevadmin', '--account-pass=egyesek11', '--account-mail=hirek@gysev.hu', '--site-mail=hirek@gysev.hu', '-y', 'macroweb_drupal_skeleton'
-          execute :drush, 'config:set', '-y', 'system.site', 'uuid', '2b2647e2-93a7-4d46-a75d-deeb8c7a59a4'
-          execute :drush, 'config:set', '-y', 'language.entity.hu', 'uuid', 'f8d8cff5-5da8-4419-8f18-93f01ed3326c'
+          execute :drush, 'site:install', "--root=#{release_path.join(fetch(:drupal_root))}", '--locale=hu', '--account-name=blogadmin', '--account-mail=spam@blackhole.hron.me', '--site-mail=spam@blackhole.hron.me', '-y', '--existing-config'
+          execute :drush, 'config:set', '-y', 'system.site', 'uuid', site_uuid
+          execute :drush, 'config:set', '-y', 'language.entity.hu', 'uuid', lang_uuid(:hu)
           execute :drush, 'config:import', "--root=#{release_path.join(fetch(:drupal_root))}", '-y'
-          execute :drush,  'locale:import:all', "--root=#{release_path.join(fetch(:drupal_root))}", "translations", "--override=not-customized", "--type=not-customized"
+          #execute :drush,  'locale:import:all', "--root=#{release_path.join(fetch(:drupal_root))}", release_path.join('translations'), "--override=not-customized", "--type=not-customized"
         end
       end
+
+      invoke 'deploy:publishing'
+      invoke 'deploy:published'
+      invoke 'deploy:finishing'
+      invoke 'deploy:finished'
     end
 
     task :offline do
@@ -90,7 +120,7 @@ namespace :drupal do
         execute :drush, 'config:import', "--root=#{release_path.join(fetch(:drupal_root))}", '-y'
         execute :drush,  'locale:check'
         execute :drush,  'locale:update'
-        execute :drush,  'locale:import:all', "--root=#{release_path.join(fetch(:drupal_root))}", release_path.join('translations'), '--override=all', '--type=customized'
+        #execute :drush,  'locale:import:all', "--root=#{release_path.join(fetch(:drupal_root))}", release_path.join('translations'), '--override=all', '--type=customized'
         # %w[hu de].each do |lang|
         #   execute :drush, 'locale:import', "--root=#{release_path.join(fetch(:drupal_root))}", lang, release_path.join('web/profiles/custom/macroweb_drupal_skeleton/translations/#{lang}.po'), "--override=not-customized", "--type=not-customized"
         # end
