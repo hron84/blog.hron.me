@@ -39,6 +39,8 @@ settings:
     - side-by-side
     - fullscreen
     - guide
+  image_upload:
+    status: true
 image_upload:
   status: true
   scheme: public
