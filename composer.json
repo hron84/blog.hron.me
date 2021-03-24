@@ -44,21 +44,19 @@
         "drupal/core-recommended": "^8.8",
         "drupal/default_content": "^2.0@alpha",
         "drupal/eu_cookie_compliance": "^1.5",
-        "drupal/fontawesome": "^2.18",
         "drupal/geshifilter": "^2.0",
         "drupal/google_analytics": "^3.1",
         "drupal/hide_revision_field": "^2.2",
         "drupal/markdown": "^2.0",
         "drupal/metatag": "^1.15",
+        "drupal/oauth_login_oauth2": "^1.223",
         "drupal/pathauto": "^1.8",
         "drupal/recaptcha": "^3.0",
         "drupal/recaptcha_v3": "^1.4",
         "drupal/redirect": "^1.6",
         "drupal/simplemde": "^1.0@alpha",
         "drush/drush": "^10.0",
-        "fortawesome/font-awesome": "5.13.1",
-        "league/commonmark": "^1.5",
-        "oomphinc/composer-installers-extender": "^2.0"
+        "league/commonmark": "^1.5"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -89,7 +87,6 @@
                 "web-root": "web/"
             }
         },
-        "installer-types": ["library"],
         "installer-paths": {
             "web/core": [
                 "type:drupal-core"
@@ -114,9 +111,6 @@
             ],
             "web/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
-            ],
-            "web/libraries/fontawesome": [
-                "fortawesome/font-awesome"
             ]
         },
         "drupal-core-project-message": {

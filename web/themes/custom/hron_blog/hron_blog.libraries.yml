@@ -2,3 +2,4 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+      'https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css': { type: external }
