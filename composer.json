@@ -56,7 +56,8 @@
         "drupal/redirect": "^1.6",
         "drupal/simplemde": "^1.0@alpha",
         "drush/drush": "^10.0",
-        "league/commonmark": "^1.5"
+        "league/commonmark": "^1.5",
+        "symfony/dotenv": "^5.2"
     },
     "conflict": {
         "drupal/drupal": "*"
