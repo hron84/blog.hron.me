@@ -27,7 +27,9 @@ set :branch, ENV['CI_BUILD_REF'] || 'master'
 # Default value for :linked_files is []
 append :linked_files,
        'web/.htaccess',
-       'web/sites/default/settings.php'
+       '.env',
+       '.env.local',
+       'salt.txt'
 #       'web/sites/default/services.yml'
 
 # Default value for linked_dirs is []
