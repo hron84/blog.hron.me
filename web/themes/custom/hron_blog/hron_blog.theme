@@ -19,8 +19,6 @@ function hron_blog_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form
   switch($form_id) {
 
   case 'comment_comment_form':
-    kpr($form['actions']['preview']['#attributes']);
-
     $form['actions']['preview']['#attributes']['class'][] = 'btn-light';
     $form['actions']['submit']['#attributes']['class'][] = 'btn-dark';
 
