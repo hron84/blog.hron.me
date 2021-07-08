@@ -71,6 +71,7 @@ namespace :drupal do
 
     desc 'Setting up a brand new drupal instance based on the configs we have'
     task :setup do
+      invoke 'deploy:check'
       invoke 'drupal:set_paths'
       invoke 'deploy:updating'
       invoke 'composer:install'
