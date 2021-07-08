@@ -5,7 +5,7 @@
   "author": "Gabor Garami <hron@hron.me>",
   "license": "CC-BY-SA",
   "dependencies": {
-    "sass": "^1.33.0",
+    "sass": "^1.35.1",
     "sass-lint": "^1.13.1"
   },
   "scripts": {
